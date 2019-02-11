@@ -1,0 +1,89 @@
+The ARAS Radio Automation System
+Copyright (C) 2019  Erasmo Alonso Iglesias
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Overview
+--------
+
+ARAS is a free broadcast automation system. It provides the neccessary tools to
+automate a broadcast station.
+
+This package contains the ARAS Web Service, which allows the user to control the
+ARAS configuration through a web application.
+
+Availability
+------------
+
+The latest version of the ARAS Web Service is available at
+https://sourceforge.net/projects/aras/.
+
+Documentation
+-------------
+
+The HTML documentation and the manual pages for the ARAS Radio Automation
+System are included in the regular ARAS package.
+
+Installation
+------------
+
+1. Unpack the distribution tarball:
+
+        $ tar xvzf aras-web-service-<version>.tar.gz
+        $ cd aras-web-service-<version>
+
+2. Change to the directory containing the unpacked source code:
+
+        cd aras-web-service-<version>
+
+3. Copy the ARAS Web Service files to the web server document root:
+
+        $ sudo cp html/* /var/www/html/
+
+4. Change the group of the ARAS configuration directory to www-data and give
+   read/write permissions to the group:
+
+        $ sudo chgrp www-data /etc/aras
+        $ sudo chmod 775 /etc/aras
+
+5. Change the groups of the ARAS configuration files that you want to be
+   modified through the web application to www-data and give read/write
+   permissions to the groups:
+
+        $ sudo chgrp www-data /etc/aras/*
+        $ sudo chmod 664 /etc/aras/*
+
+Consider that may be neccessary to install previously the required dependencies
+in your system:
+
+        apache2
+        libapache2-mod-php
+
+Reporting bugs
+--------------
+
+Report bugs to <erasmo1982@users.sourceforge.net>. Please include information
+enough to understand and reproduce the problem.
+
+Sending patches
+---------------
+
+Send patches for bug fixes and improvements to
+<erasmo1982@users.sourceforge.net>.
+
+Additional Information
+----------------------
+
+Up to date information and additons are available at the official project
+website under http://aras.sourceforge.net.

@@ -1,0 +1,228 @@
+/**
+ * @file
+ * @author  Erasmo Alonso Iglesias <erasmo1982@users.sourceforge.net>
+ * @version 1.0
+ *
+ * @section LICENSE
+ *
+ * The ARAS Radio Automation System
+ * Copyright (C) 2019  Erasmo Alonso Iglesias
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @section DESCRIPTION
+ *
+ * Main source file for ARAS Web Service.
+ */
+
+body {
+        margin: 0;
+        font-family: "liberation sans", "arial", sans-serif;
+}
+
+.sidebar {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+}
+
+.sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+}
+ 
+.sidebar a.active {
+        background-color: #2050CA;
+        color: white;
+}
+
+.sidebar a:hover:not(.active) {
+        background-color: #808080;
+        color: white;
+}
+
+div.content {
+        margin-left: 200px;
+        padding: 1px 16px;
+        height: 1000px;
+}
+
+@media screen and (max-width: 1200px) {
+        .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        }
+        .sidebar a {float: left;}
+        div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 800px) {
+        .sidebar a {
+                text-align: center;
+                float: none;
+        }
+}
+
+table {
+        display: inline-table;
+        background-color: #f0f0f0;
+}
+
+.header {
+        text-align: center;
+        font-weight: bold;
+}
+
+.button {
+        background-color: #808080;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+
+.button:hover {
+        background-color: #2050CA;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+
+.error {
+        background: white;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        display: block;
+}
+
+.error:hover {
+        background-color: #f5e5d5;
+}
+
+.note {
+        background: white;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        display: block;
+}
+
+.note:hover {
+        background-color: #e5f5d5;
+}
+
+a {
+        color: #2040ff;
+        text-decoration:none;
+}
+
+a:hover {
+        color: #4080ff;
+        text-decoration:none;
+}
+
+.table_center, .table_center td, .table_center th {  
+        border: 1px solid #ddd;
+        text-align: left;
+}
+
+.table_center {
+        border-collapse: collapse;
+}
+
+.table_center th {
+        background-color: #f0f0f0;
+}
+
+.table_center td {
+        background-color: white;
+}
+
+.table_center th, .table_center td {
+        padding: 8px;
+        text-align: center;
+}
+
+.table_left, .table_left td, .table_left th {  
+        border: 1px solid #ddd;
+        text-align: left;
+}
+
+.table_left {
+        border-collapse: collapse;
+}
+
+.table_left th {
+        background-color: #f0f0f0;
+}
+
+.table_left td {
+        background-color: white;
+}
+
+.table_left th, .table_left td {
+        padding: 8px;
+        text-align: left;
+}
+
+.table_hidden {  
+        border: none;
+        text-align: left;
+}
+
+.table_hidden {
+        border-collapse: collapse;
+}
+
+.table_hidden th {
+        background-color: #f0f0f0;
+}
+
+.table_hidden td {
+        background-color: white;
+}
+
+.table_hidden th, .table_hidden td {
+        padding: 8px;
+        text-align: center;
+}
+
+input[type=text], input[type=number], input[type=time], select {
+        width: 100%;
+        padding: 4px 4px;
+        margin: 2px 2px;
+        display: inline-block;
+        border: 1px solid #d0d0d0;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        box-sizing: border-box;
+}
+
