@@ -58,6 +58,9 @@ class aras_block_node {
  */
 function aras_block_load_line(&$block, $line)
 {
+        /* Create block node */
+        $b = new aras_block_node();
+
         /* Get block name, block type and data */
         if (($res1 = aras_parse_line_configuration($line)) == NULL)
                 return -1;
