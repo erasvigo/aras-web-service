@@ -137,8 +137,6 @@
 
                 fwrite($fp, sprintf("%-34s %s\n", "GUIPeriod", $configuration->gui_period));
 
-                fwrite($fp);
-
                 /* Close schedule file */
                 if (fclose($fp) == FALSE)
                         $errors[] = sprintf("Error: Block file cannot be closed");
@@ -427,7 +425,7 @@
 
                 <a name="configuration"></a><h3>Configuration</h3>
 
-                <form method="post" action="aras.php#configuration">
+                <form method="post" action="index.php#configuration">
                 <p><input class="button" type="submit" name="update-configuration" value="Update"><input class="button" type="submit" name="cancel" value="Cancel"></p>
                 <table class="table_left">
                         <tr>
@@ -664,7 +662,7 @@
                         <tr><td>Interleave</td><td>Two blocks and their multiplicities. Use simple quotation marks as delimiters for block names. For example: 'block 1' 'block 2' 1 3</td></tr>
                 </table>
 
-                <form method="post" action="aras.php#block">
+                <form method="post" action="index.php#block">
                         <p><input class="button" type="submit" name="update-block" value="Update"><input class="button" type="submit" name="cancel" value="Cancel"></p>
                         <?php
                         aras_block_write_rows($block);
@@ -674,7 +672,7 @@
 
                 <a name="schedule"></a><h3>Schedule editor</h3>
 
-                <form method="post" action="aras.php#schedule">
+                <form method="post" action="index.php#schedule">
 
                         <p><input class="button" type="submit" name="update-schedule" value="Update"><input class="button" type="submit" name="cancel" value="Cancel"></p>
 
