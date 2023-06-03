@@ -53,6 +53,9 @@ class aras_schedule_node {
  */
 function aras_schedule_load_line(&$schedule, $line)
 {
+        /* Create schedule node */
+        $s = new aras_block_node();
+
         /* Get block name, block type and data */
         if (($res1 = aras_parse_line_configuration($line)) == NULL)
                 return -1;
